@@ -1,9 +1,11 @@
 module Euler.Util
        ( euler
        , factor
+       , module Euler.Sieve
        ) where
 
 import Data.List
+import Euler.Sieve (sieve)
 
 euler :: IO ()
 euler = putStrLn "Euler problem"

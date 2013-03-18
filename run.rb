@@ -4,7 +4,7 @@ def run(id)
   puts "running #{id}"
   system "
     set -e
-    ghc -o problem#{id} problem#{id}.hs euler.hs
+    ghc -optc -std=gnu99 -o problem#{id} problem#{id}.hs util/euler.hs util/sieve_ffi.hs util/sieve.c
     timelimit -t 60 time -p ./problem#{id}
     rm problem#{id} *.o *.hi 2>/dev/null
   "
