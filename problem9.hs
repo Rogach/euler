@@ -1,3 +1,4 @@
+main :: IO ()
 main = print $ head [ 
   a * b * c
   | a <- [1..1000]

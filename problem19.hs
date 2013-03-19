@@ -27,6 +27,7 @@ data Date = Date { year :: Int
                  , dayOfWeek :: Weekday
                  } deriving (Show, Eq, Ord)
 
+main :: IO ()
 main = print $ length $
        filter (\d -> dayOfWeek d == Sunday && day d == 1) $ 
        takeWhile (\d -> year d < 2001) $ 

@@ -26,6 +26,7 @@ grid = [
   [01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48]
   ]
 
+main :: IO ()
 main = print $ maximum $ map maximum $ concat
        [ (\x -> product <$> sliding 4 x) <$> grid -- horizontal
        , (\x -> product <$> sliding 4 x) <$> transpose grid -- vertical

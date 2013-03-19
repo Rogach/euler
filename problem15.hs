@@ -1,6 +1,7 @@
 import qualified Data.Map as Map
 import Control.Monad.State
 
+main :: IO ()
 main = print $ evalState (routes 20 20) Map.empty
 
 routes :: Int -> Int -> State (Map.Map (Int, Int) Int) Int

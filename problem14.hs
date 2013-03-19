@@ -2,6 +2,7 @@ import Data.List
 import Data.Ord
 
 -- dumb way, but fast (completes in 5.2s)
+main :: IO ()
 main = print $ fst $ maximumBy (comparing (length . snd)) $ map (\n -> (n, collatz n)) [1..999999]
 collatz :: Int -> [Int]
 collatz n

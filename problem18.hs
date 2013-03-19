@@ -19,6 +19,7 @@ triangle = [
   [75]
   ]
            
+main :: IO ()
 main = print $ longestPath triangle
 
 longestPath :: [[Int]] -> Int

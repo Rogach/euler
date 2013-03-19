@@ -1,5 +1,6 @@
 import Data.Char
 
+main :: IO ()
 main = print $ sum $ map (length . filter isAlpha . toEnglish) [1..1000]
 
 toEnglish :: Int -> String

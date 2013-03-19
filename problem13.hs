@@ -102,4 +102,5 @@ numbers = [
   53503534226472524250874054075591789781264330331690
   ]
 
+main :: IO ()
 main = print $ take 10 $ show $ sum numbers
