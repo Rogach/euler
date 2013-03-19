@@ -1,6 +1,6 @@
 import Data.Char
 
-main = print $ sum $ map (length . filter (isAlpha) . toEnglish) [1..1000]
+main = print $ sum $ map (length . filter isAlpha . toEnglish) [1..1000]
 
 toEnglish :: Int -> String
 toEnglish n = case n of
@@ -40,3 +40,4 @@ toEnglish n = case n of
   _ | mod n 100 == 0 -> toEnglish (n `div` 100) ++ " hundred"
   _ | n < 1000 -> toEnglish (n - mod n 100) ++ " and " ++ toEnglish (mod n 100)
 
+  _ -> "gazillion"

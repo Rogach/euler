@@ -46,6 +46,6 @@ nextWeekday d = succ d
 
 monthLength :: Date -> Int
 monthLength Date { year = y, month = m } = case m of
-  _ | any (== m) [September, April, June, November] -> 30
+  _ | m `elem` [September, April, June, November] -> 30
   February -> if mod y 4 == 0 && (mod y 400 == 0 || mod y 100 /= 0) then 29 else 28
   _ -> 31

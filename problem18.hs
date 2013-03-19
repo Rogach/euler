@@ -24,3 +24,4 @@ main = print $ longestPath triangle
 longestPath :: [[Int]] -> Int
 longestPath ((l:[]):[]) = l
 longestPath (row1:row2:rest) = longestPath $ zipWith (+) row2 (map maximum $ sliding 2 row1) : rest
+longestPath _ = 0

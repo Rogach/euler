@@ -4,7 +4,7 @@ def run(id)
   puts "running #{id}"
   system "
     set -e
-    ghc -optc -std=gnu99 -O2 -o problem#{id} problem#{id}.hs util/euler.hs util/sieve_ffi.hs util/sieve.c
+    ghc -Wall -fno-warn-type-defaults -optc -std=gnu99 -O2 -o problem#{id} problem#{id}.hs util/euler.hs util/sieve_ffi.hs util/sieve.c
     time -p timelimit -t 60 ./problem#{id}
     rm problem#{id} *.o *.hi 2>/dev/null
   "
