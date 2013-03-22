@@ -1,9 +1,7 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
 
 module Euler.Sieve where 
-import Foreign.C
 import Foreign
-import Control.Applicative
 
 foreign import ccall "sieve" c_sieve :: Int -> Ptr Int -> IO (Ptr Int)
 
